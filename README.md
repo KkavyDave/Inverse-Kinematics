@@ -18,3 +18,5 @@ The function first calculates the position of point P3 using trigonometry based 
 It then checks if the desired position is within the reachable workspace of the robotic arm.
 If the position is reachable, it calculates the joint angles (theta1, theta2, and theta3) required for the elbow-down configuration of the arm.
 
+Working Video Link : https://youtu.be/JGDx4rtl6qw 
+
