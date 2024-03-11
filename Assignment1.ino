@@ -28,7 +28,7 @@ void moveBraccio(float valuex, float valuey, float gamma) {
   // Calculate position of P3
   float valuea = valuex - (L3 * cos(radians(gamma)));
   float valueb = valuey - (L3 * sin(radians(gamma)));
-  float valueC = sqrt(pow(a, 2) + pow(b, 2));
+  float valueC = sqrt(pow(valuea, 2) + pow(valueb, 2));
 
   // Check if position is within reachable workspace
   if ((L1 + L2) > valueC) {
