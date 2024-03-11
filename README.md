@@ -1,7 +1,20 @@
 Use a USB cable to connect the Arduino UNO to the PC and upload the provided code by selecting 'Tools -> Board -> Arduino UNO' and choosing the correct serial port in 'Tools -> Port'.
 
-In this assignment we were supposed to perform and analysis robotic movements accordingly after passing on the values for x, y and angle for which we will be using the variable gamma in the Arduino code for 3 DOF.
+This code is an Arduino sketch for controlling a robotic arm known as Braccio using inverse kinematics. The robotic arm has three degrees of freedom (DOF) controlled by servo motors at the base, shoulder, elbow, wrist rotation, wrist vertical, and gripper.
 
-As we can see in the above given diagram we used for calculation we frame a condition for reachable length and calculate the values of alpha, beta and gamma. Gamma here is the summation of all the angles theta1, theta2, theta 3 for the 3 DOF’s represented in the picture.
+Libraries Included:
 
-We have derived the values of theta1, theta2 and theta3 accordingly and implemented them in Arduino IDE respectively.
+Braccio.h: This library provides functions to control the Braccio robotic arm.
+Servo.h: This library allows control of servo motors.
+
+moveBraccio() Function:
+
+This function calculates the servo angles required to position the end-effector of the robotic arm at the specified coordinates and orientation using inverse kinematics.
+It takes three parameters: valuex, valuey, and gamma, which represent the x and y coordinates of the end-effector and the orientation angle respectively.
+
+Inverse Kinematics Calculation:
+
+The function first calculates the position of point P3 using trigonometry based on the input coordinates and orientation.
+It then checks if the desired position is within the reachable workspace of the robotic arm.
+If the position is reachable, it calculates the joint angles (theta1, theta2, and theta3) required for the elbow-down configuration of the arm.
+
